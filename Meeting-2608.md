@@ -1,7 +1,8 @@
 ### Meetingnotizen 26.08.2022
 
 Anwesend: Robin, Fynn
-Zeit 13:00 - 14:15
+
+Zeit: 13:00 - 14:15
 
 ### Inhalt
 * Entwicklung Konzept für Pipelines
