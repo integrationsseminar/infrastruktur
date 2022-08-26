@@ -11,4 +11,4 @@ assignees: lumaghg, STAT1C-Sy
 
 ** Wie sollte es sein: **
 
-**Zusätzliche Anmerkungen **
+**Zusätzliche Anmerkungen: **
