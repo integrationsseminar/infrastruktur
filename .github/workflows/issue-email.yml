@@ -9,26 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send mail
-        uses: dawidd6/action-send-mail@v3
+      - uses: actions/checkout@v2
+      - name: Comment thank you
+        uses: actions-ecosystem/action-create-comment@v1
         with:
-          # Required mail server address:
-          server_address: smtp.strato.de
-          # Required mail server port:
-          server_port: 465
-          # Optional (recommended): mail server username:
-          username: ${{secrets.EMAIL}}
-          # Optional (recommended) mail server password:
-          password: ${{secrets.EMAIL_PASS}}
-          # Required mail subject:
-          subject: Danke für deine Anfrage
-          # Required recipients' addresses:
-          to: mail@fynn-weyrich.de
-          # Required sender full name (address can be skipped):
-          from: Fitness App Infrastruktur-Team # <user@example.com>
-          # Optional whether this connection use TLS (default is true if server_port is 465)
-          secure: true
-          # Optional HTML body read from file:
-          html_body: "test"
-          # Optional unsigned/invalid certificates allowance:
-          ignore_cert: true
+          github_token: ${{ secrets.github_token }}
+          number: ${{ github.event.issue.number }}
+          body: |
+            Hi @${{ github.actor }}, Danke für deine Anfrage! Wir versuchen uns schnellstmöglich bei dir zu melden ⏱. Behalte bitte deine Inbox im Auge, da wir dich bei Rückfragen in diesem Thread markieren. 📯📬
