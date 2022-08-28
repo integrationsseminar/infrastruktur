@@ -10,7 +10,8 @@ services:
       - 4000:4000
     environment:
       - PORT=${BACKEND_PORT}
-      - DB_URL
+      - DB_URL=mongodb+srv://kinoticket:test1234@cluster0.ofyjc.mongodb.net/Cluster0?retryWrites=true&w=majority
+      #- DB_URL
     restart: always
 
   frontend:
