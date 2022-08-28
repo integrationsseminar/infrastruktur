@@ -17,7 +17,7 @@ onHostRule = true
 
 [docker]
 endpoint = "unix:///var/run/docker.sock"
-domain = "localhost"
+domain = "fitness.gang-of-fork.de"
 watch = true
 network = "infrastruktur_default"
 
@@ -25,5 +25,5 @@ network = "infrastruktur_default"
 entryPoint = "http"
 
 [[acme.domains]]
-main = "localhost"
-sans = ["localhost"]
+main = "fitness.gang-of-fork.de"
+sans = ["api.fitness.gang-of-fork.de"]
