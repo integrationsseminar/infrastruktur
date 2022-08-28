@@ -9,7 +9,7 @@ services:
     ports: 
       - 4000:4000
     environment:
-      - PORT:${BACKEND_PORT}
+      - PORT=${BACKEND_PORT}
       - DB_URL
     restart: always
 
