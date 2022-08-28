@@ -34,10 +34,8 @@ jobs:
           PASSWORD: ${{ secrets.SSH_PASSWORD }}
           PORT: ${{ secrets.SSH_PORT }}
           script: |
-            # enter sudo password
-            echo ${{ secrets.SSH_PASSWORD }} | sudo -S echo helloworld
             # login to ghcr
-            echo ${{secrets.GITHUB_TOKEN}} | sudo docker login ghcr.io -u lumaghg --password-stdin 
+            echo ${{secrets.SSH_PASSWORD}} | sudo -S docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN}}
             # restart containers, if neccessary
             echo ${{ secrets.SSH_PASSWORD }} | sudo -S \
             BACKEND_PORT=${{ secrets.BACKEND_PORT }} \
