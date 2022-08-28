@@ -5,7 +5,7 @@ on:
     branches: [ main ]
     paths:
       - "hosting/**"
-      - ".github/workflows"
+      - ".github/workflows/**"
 
 
 jobs:
