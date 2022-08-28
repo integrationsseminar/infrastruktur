@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  backend: 
+    image: ghcr.io/projekt-fitnessapp/backend:latest
+    labels:
+      - traefik.frontend.rule=Host:api.localhost
+      - traefik.enable=true
+    ports: 
+      - 4000:4000
+    environment:
+      - PORT=4000
+      - DB_URL=mongodb+srv://kinoticket:test1234@cluster0.ofyjc.mongodb.net/Cluster0?retryWrites=true&w=majority
+      #- DB_URL
+    restart: always
+
+  frontend:
+    #image: ghcr.io/projekt-fitnessapp/frontend:latest 
+    image: nginxdemos/hello
+    labels:
+      - traefik.frontend.rule=Host:localhost
+    ports: 
+      - 4001:80
+    restart: always
+
+  reverse-proxy:
+    # The official v2 Traefik docker image
+    image: traefik:1.7.20-alpine
+    # Enables the web UI and tells Traefik to listen to docker
+    restart: always
+    labels:
+      - traefik.enable=false
+    ports:
+      # The HTTP port
+      - "80:80"  
+      # The HTTPS port
+      - "443:443" 
+      # The Web UI
+      #- "8080:8080"
+    volumes:
+      # So that Traefik can listen to the Docker events
+      - /var/run/docker.sock:/var/run/docker.sock 
+      - ./traefik.toml:/traefik.toml
+      - ./acme.json:/acme.json 
+    
+    
