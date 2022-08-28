@@ -4,7 +4,7 @@ services:
   backend: 
     image: ghcr.io/projekt-fitnessapp/backend:latest
     labels:
-      - traefik.frontend.rule=Host:api.localhost
+      - traefik.frontend.rule=Host:api.fitnessapp.gang-of-fork.de
       - traefik.enable=true
     ports: 
       - 4000:4000
@@ -18,7 +18,7 @@ services:
     #image: ghcr.io/projekt-fitnessapp/frontend:latest 
     image: nginxdemos/hello
     labels:
-      - traefik.frontend.rule=Host:localhost
+      - traefik.frontend.rule=Host:fitnessapp.gang-of-fork.de
     ports: 
       - 4001:80
     restart: always
