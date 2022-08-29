@@ -7,10 +7,10 @@ assignees: lumaghg, STAT1C-Sy
 
 ---
 
-**Was ist passiert: **
+**Was ist passiert:**
 
-**Was sollte passieren: **
+**Was sollte passieren:**
 
-**Wie kann der Fehler reproduziert werden: **
+**Wie kann der Fehler reproduziert werden:**
 
 **Weitere Anmerkungen:**
