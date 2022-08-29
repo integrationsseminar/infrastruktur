@@ -39,6 +39,6 @@ jobs:
             echo ${{secrets.SSH_PASSWORD}} | sudo -S docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
             # restart containers, if neccessary
             echo "DB_URL=${{ secrets.DB_URL }} \n \
-            BACKEND_PORT=${{ secrets.BACKEND_PORT }}" > .env
+            BACKEND_PORT=${{ secrets.BACKEND_PORT }}" > ./hosting/.env
             docker-compose -f ./hosting/docker-compose.yml up -d --force-recreate
            
