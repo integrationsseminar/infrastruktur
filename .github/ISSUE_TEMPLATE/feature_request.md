@@ -9,6 +9,6 @@ assignees: lumaghg, STAT1C-Sy
 
 **Wie ist es aktuell:**
 
-** Wie sollte es sein:**
+**Wie sollte es sein:**
 
 **Zusätzliche Anmerkungen:**
