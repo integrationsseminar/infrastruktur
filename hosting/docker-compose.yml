@@ -15,8 +15,8 @@ services:
     restart: always
 
   frontend:
-    #image: ghcr.io/projekt-fitnessapp/frontend:latest 
-    image: nginxdemos/hello
+    image: ghcr.io/projekt-fitnessapp/frontend:latest 
+    #image: nginxdemos/hello
     labels:
       - traefik.frontend.rule=Host:fitnessapp.gang-of-fork.de
     ports: 
