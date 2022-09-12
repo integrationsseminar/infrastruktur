@@ -30,7 +30,7 @@ services:
     ports: 
      - 4002:4000
     environment:
-      - PORT
+      - PORT=${LA_PORT}
       - DB_URL
     restart: always
 
