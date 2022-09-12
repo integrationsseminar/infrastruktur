@@ -17,7 +17,7 @@ onHostRule = true
 
 [docker]
 endpoint = "unix:///var/run/docker.sock"
-domain = "fitnessapp.gang-of-fork.de"
+domain = "gang-of-fork.de"
 watch = true
 network = "infrastruktur_default"
 
@@ -26,4 +26,8 @@ entryPoint = "http"
 
 [[acme.domains]]
 main = "fitnessapp.gang-of-fork.de"
-sans = ["api.fitnessapp.gang-of-fork.de"]
+sans = ["api.fitnessapp.gang-of-fork.de", "la.fitnessapp.gang-of-fork.de"]
+
+[[acme.domains]]
+main = "learning-analytics.gang-of-fork.de"
+sans = ["api.learning-analytics.gang-of-fork.de"]
