@@ -27,6 +27,12 @@ services:
     labels:
      # - traefik.frontend.rule=Host:api.learning-analytics.gang-of-fork.de
      - traefik.frontend.rule=Host:la.fitnessapp.gang-of-fork.de
+    ports: 
+     - 4002:4000
+    environment:
+      - PORT
+      - DB_URL
+    restart: always
 
 
   reverse-proxy:
