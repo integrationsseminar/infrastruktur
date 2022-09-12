@@ -26,7 +26,7 @@ entryPoint = "http"
 
 [[acme.domains]]
 main = "fitnessapp.gang-of-fork.de"
-sans = ["api.fitnessapp.gang-of-fork.de", "la.fitnessapp.gang-of-fork.de"]
+sans = ["api.fitnessapp.gang-of-fork.de"]
 
 [[acme.domains]]
 main = "learning-analytics.gang-of-fork.de"

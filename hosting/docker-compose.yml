@@ -25,8 +25,7 @@ services:
   learning-analytics-backend:
     image: ghcr.io/integrationsseminar/backend:latest
     labels:
-     # - traefik.frontend.rule=Host:api.learning-analytics.gang-of-fork.de
-     - traefik.frontend.rule=Host:la.fitnessapp.gang-of-fork.de
+     - traefik.frontend.rule=Host:api.learning-analytics.gang-of-fork.de
     ports: 
      - 4002:4000
     environment:
