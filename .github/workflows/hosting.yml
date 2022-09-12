@@ -39,6 +39,7 @@ jobs:
             echo ${{secrets.SSH_PASSWORD}} | sudo -S docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
             # restart containers, if neccessary
             printf "DB_URL=${{ secrets.DB_URL }} \n \
-            BACKEND_PORT=${{ secrets.BACKEND_PORT }}" > ./hosting/fitnessapp/.env
-            docker-compose -f ./hosting/docker-compose.yml --env-file ./hosting/fitnessapp/.env up -d --force-recreate
+            LA_PORT=${{ secrets.LA_PORT }}
+            BACKEND_PORT=${{ secrets.BACKEND_PORT }}" > ./hosting/.env
+            docker-compose -f ./hosting/docker-compose.yml --env-file ./hosting/.env up -d --force-recreate
            
