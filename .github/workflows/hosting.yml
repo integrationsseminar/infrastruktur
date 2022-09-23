@@ -38,9 +38,10 @@ jobs:
             # login to ghcr
             echo ${{secrets.SSH_PASSWORD}} | sudo -S docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
             # restart containers, if neccessary
-            # write envs of fitnessapp and LA into .env
+            # write envs of fitnessapp (no prefix), Learning Analytics (LA prefix) and PlantExchange (PE Prefix)
             printf "DB_URL=${{ secrets.DB_URL }} \n \
             BACKEND_PORT=${{ secrets.BACKEND_PORT }} \n \
-            LA_PORT=${{ secrets.LA_PORT }}" > ./hosting/.env
+            LA_PORT=${{ secrets.LA_PORT }} \n \
+            PE_PORT=${{ secrets.PE_PORT }}" > ./hosting/.env
             docker-compose -f ./hosting/docker-compose.yml --env-file ./hosting/.env up -d --force-recreate
            
