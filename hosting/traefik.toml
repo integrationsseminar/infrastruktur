@@ -25,9 +25,5 @@ network = "infrastruktur_default"
 entryPoint = "http"
 
 [[acme.domains]]
-main = "fitnessapp.gang-of-fork.de"
-sans = ["api.fitnessapp.gang-of-fork.de"]
-
-[[acme.domains]]
-main = "learning-analytics.gang-of-fork.de"
-sans = ["api.learning-analytics.gang-of-fork.de"]
+main = "*.gang-of-fork.de"
+sans = ["api.fitnessapp.gang-of-fork.de", "fitnessapp.gang-of-fork.de", "learning-analytics.gang-of-fork.de", "api.learning-analytics.gang-of-fork.de"]
