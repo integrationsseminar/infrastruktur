@@ -33,6 +33,17 @@ services:
       - DB_URL
     restart: always
 
+  plant-exchange-backend:
+    image: ghcr.io/gang-of-fork/p2p-backend:latest
+    labels:
+     - traefik.frontend.rule=Host:api.plantexchange.gang-of-fork.de
+    ports: 
+     - 4003:4000
+    environment:
+      - PORT=${PE_PORT}
+    restart: always
+
+
 
   reverse-proxy:
     # The official v2 Traefik docker image
