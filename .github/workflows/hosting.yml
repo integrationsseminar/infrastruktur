@@ -42,6 +42,8 @@ jobs:
             printf "DB_URL=${{ secrets.DB_URL }} \n \
             BACKEND_PORT=${{ secrets.BACKEND_PORT }} \n \
             LA_PORT=${{ secrets.LA_PORT }} \n \
-            PE_PORT=${{ secrets.PE_PORT }}" > ./hosting/.env
+            PE_PORT=${{ secrets.PE_PORT }} \n \
+            PE_DB_URL=${{ secrets.PE_DB_URL }} \n \
+            PE_JWT_SECRET=${{ secrets.PE_JWT_SECRET }}" > ./hosting/.env
             docker-compose -f ./hosting/docker-compose.yml --env-file ./hosting/.env up -d --force-recreate
            

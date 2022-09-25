@@ -41,6 +41,8 @@ services:
      - 4003:4000
     environment:
       - PORT=${PE_PORT}
+      - DB_URL=${PE_DB_URL}
+      - JWT_SECRET=${JWT_SECRET}
     restart: always
 
 
