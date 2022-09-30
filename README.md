@@ -1,5 +1,5 @@
 # Infrastruktur und DevOps Team - Projekt Tromega
-Frontend: [![TROMEGA Backend](https://img.shields.io/website-up-down-green-red/https/api.fitnessapp.gang-of-fork.de)](https://api.fitnessapp.gang-of-fork.de)  
+Frontend: [![TROMEGA Backend](https://img.shields.io/website-up-down-green-red/https/api.fitnessapp.gang-of-fork.de/categories)](https://api.fitnessapp.gang-of-fork.de/categories)  
 Backend: [![TROMEGA Web-Frontend](https://img.shields.io/website-up-down-green-red/https/fitnessapp.gang-of-fork.de)](https://fitnessapp.gang-of-fork.de)
 
 ## Helpdesk
