@@ -42,7 +42,7 @@ services:
     environment:
       - PORT=${PE_PORT}
       - DB_URL=${PE_DB_URL}
-      - JWT_SECRET=${JWT_SECRET}
+      - JWT_SECRET=${PE_JWT_SECRET}
     restart: always
 
   plant-exchange-frontend:
