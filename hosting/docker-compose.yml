@@ -27,7 +27,7 @@ services:
     labels:
      - traefik.frontend.rule=Host:api.learning-analytics.gang-of-fork.de
     ports: 
-     - 4002:4000
+     - 4010:4000
     environment:
       - PORT=${LA_PORT}
       - DB_URL
@@ -38,11 +38,20 @@ services:
     labels:
      - traefik.frontend.rule=Host:api.plantexchange.gang-of-fork.de
     ports: 
-     - 4003:4000
+     - 4020:4000
     environment:
       - PORT=${PE_PORT}
       - DB_URL=${PE_DB_URL}
       - JWT_SECRET=${JWT_SECRET}
+    restart: always
+
+  plant-exchange-frontend:
+    #image: ghcr.io/gang-of-fork/p2p-frontend:latest
+    image: nginxdemos/hello
+    labels:
+      - traefik.frontend.rule=Host:plantexchange.gang-of-fork.de
+    ports: 
+      - 4021:80
     restart: always
 
 
