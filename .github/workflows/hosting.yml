@@ -41,6 +41,8 @@ jobs:
             # write envs of fitnessapp (no prefix), Learning Analytics (LA prefix) and PlantExchange (PE Prefix)
             printf "DB_URL=${{ secrets.DB_URL }} \n \
             BACKEND_PORT=${{ secrets.BACKEND_PORT }} \n \
+            GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }} \n \
+            GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }} \n \
             LA_PORT=${{ secrets.LA_PORT }} \n \
             PE_PORT=${{ secrets.PE_PORT }} \n \
             PE_DB_URL=${{ secrets.PE_DB_URL }} \n \

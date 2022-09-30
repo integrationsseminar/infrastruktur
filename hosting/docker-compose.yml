@@ -12,6 +12,8 @@ services:
       - PORT=${BACKEND_PORT}
       #- DB_URL=mongodb+srv://kinoticket:test1234@cluster0.ofyjc.mongodb.net/Cluster0?retryWrites=true&w=majority
       - DB_URL
+      - GOOGLE_CLIENT_ID
+      - GOOGLE_CLIENT_SECRET
     restart: always
 
   fitness-frontend:
