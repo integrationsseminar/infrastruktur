@@ -53,7 +53,7 @@ services:
     labels:
       - traefik.frontend.rule=Host:plantexchange.gang-of-fork.de
     ports: 
-      - 4021:80
+      - 4021:3000
     restart: always
 
   reverse-proxy:
