@@ -48,15 +48,13 @@ services:
     restart: always
 
   plant-exchange-frontend:
-    #image: ghcr.io/gang-of-fork/p2p-frontend:latest
-    image: nginxdemos/hello
+    image: ghcr.io/gang-of-fork/p2p-frontend:latest
+    #image: nginxdemos/hello
     labels:
       - traefik.frontend.rule=Host:plantexchange.gang-of-fork.de
     ports: 
       - 4021:80
     restart: always
-
-
 
   reverse-proxy:
     # The official v2 Traefik docker image
