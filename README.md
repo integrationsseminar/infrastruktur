@@ -6,7 +6,7 @@ Dies ist das Repository des Infrastruktur und DevOps Teams des Projekt TROMEGA. 
 [![FA-Backend](https://img.shields.io/website?down_color=red&down_message=offline&label=TROMEGA%20Backend&logo=express&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fapi.fitnessapp.gang-of-fork.de%2Fping)](https://api.fitnessapp.gang-of-fork.de/ping)
 
 
-<details>
+<details open>
 <summary>Andere Projekte</summary>
 
 ### Learning-Analytics
