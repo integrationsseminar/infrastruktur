@@ -7,7 +7,6 @@ on:
       - "hosting/**"
       - ".github/workflows/**"
 
-
 jobs:
   deploy:
     name: Copy files to Server
