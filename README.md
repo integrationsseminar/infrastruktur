@@ -18,7 +18,7 @@ Dies ist das Repository des Infrastruktur und DevOps Teams des Projekt TROMEGA. 
 ### PlantExchange
 
 [![PE-Frontend](https://img.shields.io/website?down_color=red&down_message=offline&label=PlantExchange%20Frontend&logo=svelte&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fplantexchange.gang-of-fork.de)](https://plantexchange.gang-of-fork.de)  
-[![PE-Backend](https://img.shields.io/website?down_color=red&down_message=offline&label=PlantExchange%20Backend&logo=deno&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fapi.plantexchange.gang-of-fork.de%2Fapi%2Fv1%2Fping)](https://plantexchange.gang-of-fork.de/api/v1/ping) 
+[![PE-Backend](https://img.shields.io/website?down_color=red&down_message=offline&label=PlantExchange%20Backend&logo=deno&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fapi.plantexchange.gang-of-fork.de%2Fapi%2Fv1%2Fping)](https://api.plantexchange.gang-of-fork.de/api/v1/ping) 
 
 </details>
 
