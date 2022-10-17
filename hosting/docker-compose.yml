@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   fitness-backend: 
-    image: ghcr.io/projekt-fitnessapp/backend:latest
+    image: ghcr.io/projekt-fitnessapp/backend:1.0.33
     labels:
       - traefik.frontend.rule=Host:api.fitnessapp.gang-of-fork.de
       - traefik.enable=true
