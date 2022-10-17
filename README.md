@@ -8,7 +8,7 @@ Dies ist das Repository des Infrastruktur und DevOps Teams des Projekt TROMEGA. 
 
 <details open>
 <summary>Andere Projekte</summary>
-
+ 
 ### Learning-Analytics
 
 [![LA-Frontend](https://img.shields.io/website?down_color=red&down_message=offline&label=Learnings-Analytics%20Frontend&logo=flutter&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Flearning-analytics.gang-of-fork.de)](https://learning-analytics.gang-of-fork.de)  
