@@ -32,7 +32,7 @@ services:
      - 4010:4000
     environment:
       - PORT=${LA_PORT}
-      - DB_URL
+      - DB_URL=${LA_DB_URL}
     restart: always
 
   learning-analytics-frontend:
