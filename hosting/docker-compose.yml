@@ -36,11 +36,11 @@ services:
     restart: always
 
   learning-analytics-frontend:
-    image: nginxdemos/hello
+    image: ghcr.io/integrationsseminar/learning-analytics-frontend:latest
     labels:
       - traefik.frontend.rule=Host:learning-analytics.gang-of-fork.de
     ports: 
-      - 4011:3000
+      - 4011:80
     restart: always
 
   plant-exchange-backend:
