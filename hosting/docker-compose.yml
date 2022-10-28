@@ -33,6 +33,7 @@ services:
     environment:
       - PORT=${LA_PORT}
       - DB_URL=${LA_DB_URL}
+      - JWT_SECRET=${LA_JWT_SECRET}
     restart: always
 
   learning-analytics-frontend:
