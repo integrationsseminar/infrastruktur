@@ -14,7 +14,10 @@ services:
       - DB_URL
       - GOOGLE_CLIENT_ID
       - GOOGLE_CLIENT_SECRET
+      - LOGS_PASSWORD
     restart: always
+    volumes:
+      - ./winston.log:/winston.log
 
   fitness-frontend:
     image: ghcr.io/projekt-fitnessapp/frontend:latest 
