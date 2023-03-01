@@ -42,6 +42,7 @@ jobs:
             BACKEND_PORT=${{ secrets.BACKEND_PORT }} \n \
             GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }} \n \
             GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }} \n \
+            LOGS_PASSWORD=${{ secrets.LOGS_PASSWORD }} \n \
             LA_PORT=${{ secrets.LA_PORT }} \n \
             LA_DB_URL=${{ secrets.LA_DB_URL }} \n \
             LA_JWT_SECRET=${{ secrets.LA_JWT_SECRET }} \n \
