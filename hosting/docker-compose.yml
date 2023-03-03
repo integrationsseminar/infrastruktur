@@ -15,6 +15,7 @@ services:
       - GOOGLE_CLIENT_ID
       - GOOGLE_CLIENT_SECRET
       - LOGS_PASSWORD
+      - LOGS_MONGO_ACTIVE
     restart: always
     volumes:
       - ./winston.log:/winston.log
