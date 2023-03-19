@@ -35,3 +35,6 @@ sans = ["api.learning-analytics.gang-of-fork.de"]
 [[acme.domains]]
 main =  "plantexchange.gang-of-fork.de"
 sans = ["api.plantexchange.gang-of-fork.de"]
+
+[[acme.domains]]
+main =  "example.odatafy.gang-of-fork.de"
