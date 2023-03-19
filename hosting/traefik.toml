@@ -11,7 +11,7 @@ defaultEntryPoints = ["http", "https"]
 
 [acme]
 email = "kino@fynn-weyrich.de"
-storage = "acme.json"
+storage = "acme/acme.json"
 entryPoint = "https"
 onHostRule = true
 
