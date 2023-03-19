@@ -75,7 +75,7 @@ services:
     labels:
      - traefik.frontend.rule=Host:example.odatafy.gang-of-fork.de
     ports: 
-     - 4020:4000
+     - 4030:4000
     environment:
       - PORT=4000
       - DB_URL=${ODATAFY_DB_URL}
