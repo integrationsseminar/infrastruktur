@@ -37,4 +37,4 @@ main =  "plantexchange.gang-of-fork.de"
 sans = ["api.plantexchange.gang-of-fork.de"]
 
 [[acme.domains]]
-main =  "odatafy.gang-of-fork.de"
+main =  "example.odatafy.gang-of-fork.de"
