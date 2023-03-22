@@ -1,5 +1,10 @@
 # Infrastruktur und DevOps Team - Projekt TROMEGA
 Dies ist das Repository des Infrastruktur und DevOps Teams des Projekt TROMEGA. In diesem Repository wird auch das Deployment diverser anderer Uniprojekte verwaltet, lasst euch also nicht überraschen, wenn euch in den hosting files etwas über den Weg läuft, das nicht nach TROMEGA aussieht :)
+
+
+## Helpdesk
+Für Fragen, Bug-Reports, Feature requests und das Hinzufügen von Environment Variablen in die Produktionsumgebung, öffnet bitte ein Issue. Wir versuchen, eure Anfrage so schnell wie möglich zu bearbeiten. 
+
 ## Links zu den Applikationen
 ### TROMEGA
 [![FA-Frontend](https://img.shields.io/website?down_color=red&down_message=offline&label=TROMEGA%20Frontend&logo=flutter&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Ffitnessapp.gang-of-fork.de)](https://fitnessapp.gang-of-fork.de)   
@@ -22,8 +27,6 @@ Dies ist das Repository des Infrastruktur und DevOps Teams des Projekt TROMEGA. 
 
 </details>
 
-## Helpdesk
-Für Fragen, Bug-Reports, Feature requests und das Hinzufügen von Environment Variablen in die Produktionsumgebung, öffnet bitte ein Issue. Wir versuchen, eure Anfrage so schnell wie möglich zu bearbeiten. 
 
 ## Entwicklungshinweise
 <details>
