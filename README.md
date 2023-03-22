@@ -13,9 +13,15 @@ Ganz im Sinne des ersten DevOps Weges haben wir direkt zu Beginn des Projekts Pr
 Um den Flow zwischen Entwicklung und IT-Operations zu optimieren, haben wir uns entschieden, eine Reihe an Automatisierungen im Bereich des Continous Integration (CI) und Continous Deployment (CD) zu implementieren. Unter dem Einsatz von GitHub Actions entstanden unter anderem Pipelines, die alle Schritte vom merge in den Main-Branch bis zum Starten der neuen Applikationsversion auf dem Linux-Server vollautomatisiert ausführen. Weiterhin haben wir durch das Einführen von Merge Requirements versucht, von Anfang an eine hohe Code Qualität forcieren. Zu den Merge Requirements zählen unter anderem das Ausführen automatisierter Unit-Tests und die Überprüfung der Test-Coverage. 
 
 ### Hosting
-Das Backend des Projekt TROMEGA sowie eine Web-Version des Flutter Frontends wird auf einer Linux-VM unter der Domain (api.)fitnessapp.gang-of-fork.de gehostet. Die Services laufen dabei jeweils in einem Docker-Container und werden mit Hilfe eines Traefik Reverse-Proxy über das Netzwerk erreichbar gemacht.
+Das Backend des Projekt TROMEGA sowie eine Web-Version des Flutter Frontends wird auf einer Linux-VM unter der Domain (api.)fitnessapp.gang-of-fork.de gehostet. Die Services laufen dabei jeweils in einem Docker-Container und werden mit Hilfe eines Traefik Reverse-Proxy über das Netzwerk erreichbar gemacht. Der Zugriff ist dabei aus Sicherheitsgründen nur über eine verschlüsselte HTTPS Verbindung möglich.
+
 ### Monitoring
+Zur schnellen Erkennung und Behebung von Ausfällen ist ein [Uptime Monitoring](https://stats.uptimerobot.com/KvZ9jIDgqn) beim Online-Dienst https://uptimerobot.com eingerichtet. Alle 5 Minuten werden die Services angepingt; wenn dabei ein Fehler auftritt, werden wir als das Infrastruktur-Team und das entsprechende Entwicklungsteam umgehend per E-Mail benachrichtigt.
+Seit dem 24. Dezember 2022 beträgt die Verfügbarkeit > 99,97 %.
+
 ### Logging
+Ganz nach dem "You build it, you run it" Prinzip möchten wir den Entwicklungsteams alle Hürden aus dem Weg räumen, ihre Services zu entiwckeln und zu betreiben. Deshalb sind alle Log-Einträge der Services seit neustem unter https://api.fitnessapp.gang-of-fork.de/admin/login einsehbar.
+
 
 
 ## Links zu den Applikationen
