@@ -1,6 +1,30 @@
 # Infrastruktur und DevOps Team - Projekt TROMEGA
-Dies ist das Repository des Infrastruktur und DevOps Teams des Projekt TROMEGA. In diesem Repository wird auch das Deployment diverser anderer Uniprojekte verwaltet, lasst euch also nicht überraschen, wenn euch in den hosting files etwas über den Weg läuf, das nicht nach TROMEGA aussieht :)
-## Monitoring
+Dies ist das Repository des Infrastruktur und DevOps Teams des Projekt TROMEGA. In diesem Repository wird auch das Deployment diverser anderer Uniprojekte verwaltet, lasst euch also nicht überraschen, wenn euch in den hosting files etwas über den Weg läuft, das nicht nach TROMEGA aussieht :)
+
+
+## Helpdesk
+Für Fragen, Bug-Reports, Feature requests und das Hinzufügen von Environment Variablen in die Produktionsumgebung, öffnet bitte ein Issue. Wir versuchen, eure Anfrage so schnell wie möglich zu bearbeiten. 
+
+## Übersicht über den Projektbeitrag
+### Prozesse
+Ganz im Sinne des ersten DevOps Weges haben wir direkt zu Beginn des Projekts Prozesse entwickelt, um die Developer Experience des Projekts zu maximieren und unnötige Arbeit, beispielsweise durch das Lösen von großen Mergekonflikten zu minimieren. Der Entwicklungsprozess des Projekt TROMEGA ist an das [Trunk-based Development](https://cloud.google.com/architecture/devops/devops-tech-trunk-based-development?hl=de) angelehnt. Im speziellen wird ein Branch-per-Issue Ansatz verfolgt. Das bedeutet, dass alle Aufgaben in möglichst kleine in sich zusammenhängende Arbeitspakete aufgespalten werden, die jeweils durch ein eigenes Issue im GitHub Project Board repräsentiert werden. Für die Bearbeitung jedes Issues wird ein eigener Branch erstellt und nach Abschluss der Arbeitspaketes in den main-Branch gemerged. So werden große Merge-Konflikte verhindert und gleichzeitig eine hohe Aktualität des main-Branches gewährleistet.
+  
+### CI/CD Pipelines
+Um den Flow zwischen Entwicklung und IT-Operations zu optimieren, haben wir uns entschieden, eine Reihe an Automatisierungen im Bereich des Continous Integration (CI) und Continous Deployment (CD) zu implementieren. Unter dem Einsatz von GitHub Actions entstanden unter anderem Pipelines, die alle Schritte vom merge in den Main-Branch bis zum Starten der neuen Applikationsversion auf dem Linux-Server vollautomatisiert ausführen. Weiterhin haben wir durch das Einführen von Merge Requirements versucht, von Anfang an eine hohe Code Qualität forcieren. Zu den Merge Requirements zählen unter anderem das Ausführen automatisierter Unit-Tests und die Überprüfung der Test-Coverage. 
+
+### Hosting
+Das Backend des Projekt TROMEGA sowie eine Web-Version des Flutter Frontends wird auf einer Linux-VM unter der Domain (api.)fitnessapp.gang-of-fork.de gehostet. Die Services laufen dabei jeweils in einem Docker-Container und werden mit Hilfe eines Traefik Reverse-Proxy über das Netzwerk erreichbar gemacht. Der Zugriff ist dabei aus Sicherheitsgründen nur über eine verschlüsselte HTTPS Verbindung möglich.
+
+### Monitoring
+Zur schnellen Erkennung und Behebung von Ausfällen ist ein [Uptime Monitoring](https://stats.uptimerobot.com/KvZ9jIDgqn) beim Online-Dienst https://uptimerobot.com eingerichtet. Alle 5 Minuten werden die Services angepingt; wenn dabei ein Fehler auftritt, werden wir als das Infrastruktur-Team und das entsprechende Entwicklungsteam umgehend per E-Mail benachrichtigt.
+Seit dem 24. Dezember 2022 beträgt die Verfügbarkeit > 99,97 %.
+
+### Logging
+Ganz nach dem "You build it, you run it" Prinzip möchten wir den Entwicklungsteams alle Hürden aus dem Weg räumen, ihre Services zu entiwckeln und zu betreiben. Deshalb sind alle Log-Einträge der Services seit neustem unter https://api.fitnessapp.gang-of-fork.de/admin/login einsehbar.
+
+
+
+## Links zu den Applikationen
 ### TROMEGA
 [![FA-Frontend](https://img.shields.io/website?down_color=red&down_message=offline&label=TROMEGA%20Frontend&logo=flutter&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Ffitnessapp.gang-of-fork.de)](https://fitnessapp.gang-of-fork.de)   
 [![FA-Backend](https://img.shields.io/website?down_color=red&down_message=offline&label=TROMEGA%20Backend&logo=express&style=plastic&up_color=green&up_message=online&url=https%3A%2F%2Fapi.fitnessapp.gang-of-fork.de%2Fping)](https://api.fitnessapp.gang-of-fork.de/ping)
@@ -22,12 +46,6 @@ Dies ist das Repository des Infrastruktur und DevOps Teams des Projekt TROMEGA. 
 
 </details>
 
-## Helpdesk
-Für Fragen, Bug-Reports, Feature requests und das hinzufügen von Environment Variablen in die Produktionsumgebung öffnet bitte ein Issue. Wir versuchen eure Anfrage so schnell wie möglich zu bearbeiten. 
-
-## Links
-Web-Frontend (Prod): [https://fitnessapp.gang-of-fork.de/](https://fitnessapp.gang-of-fork.de/)  
-Backend (Prod): [https://api.fitnessapp.gang-of-fork.de/](https://api.fitnessapp.gang-of-fork.de/)
 
 ## Entwicklungshinweise
 <details>
@@ -38,4 +56,6 @@ Backend (Prod): [https://api.fitnessapp.gang-of-fork.de/](https://api.fitnessapp
 - xx1x : Learning-Analytics
 <br>
 - xx2x : PlantExchange
+<br>
+- xx3x : ODatafy MongoDB Example
 </details>
