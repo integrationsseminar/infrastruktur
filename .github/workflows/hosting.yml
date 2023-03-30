@@ -38,19 +38,19 @@ jobs:
             echo ${{secrets.SSH_PASSWORD}} | sudo -S docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
             # restart containers, if neccessary
             # write envs of fitnessapp (no prefix), Learning Analytics (LA prefix) and PlantExchange (PE Prefix)
-            printf "DB_URL=${{ secrets.DB_URL }} \n \
-            BACKEND_PORT=${{ secrets.BACKEND_PORT }} \n \
-            GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }} \n \
-            GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }} \n \
-            LOGS_PASSWORD=${{ secrets.LOGS_PASSWORD }} \n \
-            LOGS_MONGO_ACTIVE=${{ secrets.LOGS_MONGO_ACTIVE }} \n \ 
-            ODATAFY_DB_URL=${{ secrets.ODATAFY_DB_URL }} \n \
-            LA_PORT=${{ secrets.LA_PORT }} \n \
-            LA_DB_URL=${{ secrets.LA_DB_URL }} \n \
-            LA_ADMINJS_PASSWORD=${{secrets.LA_ADMINJS_PASSWORD}} \n \
-            LA_JWT_SECRET=${{ secrets.LA_JWT_SECRET }} \n \
-            PE_PORT=${{ secrets.PE_PORT }} \n \
-            PE_DB_URL=${{ secrets.PE_DB_URL }} \n \
+            printf "DB_URL=${{ secrets.DB_URL }} \n\
+            BACKEND_PORT=${{ secrets.BACKEND_PORT }} \n\
+            GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }} \n\
+            GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }} \n\
+            LOGS_PASSWORD=${{ secrets.LOGS_PASSWORD }} \n\
+            LOGS_MONGO_ACTIVE=${{ secrets.LOGS_MONGO_ACTIVE }} \n\ 
+            ODATAFY_DB_URL=${{ secrets.ODATAFY_DB_URL }}\n \
+            LA_PORT=${{ secrets.LA_PORT }}\n\
+            LA_DB_URL=${{ secrets.LA_DB_URL }}\n \
+            LA_ADMINJS_PASSWORD=${{secrets.LA_ADMINJS_PASSWORD}}\n \
+            LA_JWT_SECRET=${{ secrets.LA_JWT_SECRET }}\n \
+            PE_PORT=${{ secrets.PE_PORT }} \n\
+            PE_DB_URL=${{ secrets.PE_DB_URL }} \n\
             PE_JWT_SECRET=${{ secrets.PE_JWT_SECRET }}" > ./hosting/.env
             docker compose -f ./hosting/docker-compose.yml --env-file ./hosting/.env up -d --force-recreate
            
