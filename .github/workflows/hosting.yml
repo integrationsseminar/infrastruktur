@@ -47,6 +47,7 @@ jobs:
             ODATAFY_DB_URL=${{ secrets.ODATAFY_DB_URL }} \n \
             LA_PORT=${{ secrets.LA_PORT }} \n \
             LA_DB_URL=${{ secrets.LA_DB_URL }} \n \
+            LA_ADMINJS_PASSWORD=${{secrets.LA_ADMINJS_PASSWORD}} \n \
             LA_JWT_SECRET=${{ secrets.LA_JWT_SECRET }} \n \
             PE_PORT=${{ secrets.PE_PORT }} \n \
             PE_DB_URL=${{ secrets.PE_DB_URL }} \n \

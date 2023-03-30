@@ -39,7 +39,7 @@ services:
             - PORT=${LA_PORT}
             - DB_URL=${LA_DB_URL}
             - JWT_SECRET=${LA_JWT_SECRET}
-            - ADMINJS_PASSWORD= ${ADMINJS_PASSWORD}
+            - ADMINJS_PASSWORD= ${LA_ADMINJS_PASSWORD}
         restart: always
 
     learning-analytics-frontend:
