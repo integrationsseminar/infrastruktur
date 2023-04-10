@@ -36,7 +36,7 @@ services:
         ports:
             - 4010:4000
         environment:
-            - PORT=${LA_PORT}
+            - PORT=4000
             - DB_URL=${LA_DB_URL}
             - JWT_SECRET=${LA_JWT_SECRET}
             - ADMINJS_PASSWORD=${LA_ADMINJS_PASSWORD}
